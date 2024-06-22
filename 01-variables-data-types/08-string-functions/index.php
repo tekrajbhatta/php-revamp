@@ -1,5 +1,37 @@
 <?php
 $output = null;
+$string = "Hello World!";
+
+// strlen
+$output = strlen($string);
+
+// str_word_count
+$output = str_word_count($string);
+
+// strpos(finds the position of a substring)
+$output = strpos($string, 'World');
+
+// get specififc character by index
+$output = $string[6];
+
+// substr(finds the character from one specific index to another, thrid param is the number of charaters to find)
+$output = substr($string, 6, 5);
+
+// str_replace
+$output = str_replace('World', 'Universe', $string);
+
+// strtolower
+$output = strtolower($string);
+
+// strtoupper
+$output = strtoupper($string);
+
+// ucwords(first letter of each word upper) 
+$output = ucwords($string);
+
+// trim
+$output = trim('        Hello world       ');
+
 ?>
 
 <!DOCTYPE html>
