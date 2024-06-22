@@ -1,5 +1,51 @@
 <?php
 $output = null;
+
+/*
+- Y - The year
+- m - The month
+- d - The day
+- D - The day of the week short name
+- l - The full day of the week name
+- h - The hour
+- i - The minute
+- s - The second
+- a - AM/PM
+*/
+
+// Get year
+$output = date('Y-m-d');
+
+// Get year with timestamp
+$output = date('Y', 936345600);
+
+// Get timestamp from strtomtime
+$output = date('Y', strtotime('1999-09-01'));
+
+// Get month 
+$output = date('m');
+
+// Get day
+$output = date('D');
+
+// Get month day and year
+$output = date('m-d-Y');
+
+// Get hour
+$output = date('h');
+
+// Get minute
+$output = date('i');
+
+// Get second
+$output = date('s');
+
+// Get AM/PM
+$output = date('a');
+
+// Put it all together
+$output = date('Y-m-d:h:i:s a');
+
 ?>
 
 <!DOCTYPE html>
