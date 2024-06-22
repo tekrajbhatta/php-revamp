@@ -2,7 +2,7 @@
 
 $title = "Introduction to PHP";
 $author = "John Doe";
-$page_title = "Brad's PHP Blog | " . $title ;
+$page_title = 'Brad\'s PHP Blog | ' . $title ;
 $blog_body = "PHP (Hypertext Preprocessor) is a widely used server-side scripting
 language that has revolutionized web development. With its simplicity,
 flexibility, and vast community support, PHP has become the backbone of
