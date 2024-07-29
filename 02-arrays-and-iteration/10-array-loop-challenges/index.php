@@ -89,5 +89,10 @@ foreach ($students as $student) {
   // calculate average
   $avgGrade = $totalGrade / count($studentGrade);
   $studentName = $student['name'];
-  echo 'The average garde for ' . $studentName . ' is: ' . $avgGrade . '<br>';
+
+  // One way
+  // echo 'The average garde for ' . $studentName . ' is: ' . $avgGrade . '<br>';
+
+  // Another way
+  echo "{$studentName}: Average Grade = {$avgGrade} <br>";
 }
