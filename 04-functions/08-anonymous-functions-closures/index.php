@@ -13,7 +13,7 @@ echo "The sqaure of 5 is: " . $result . "<br>";
 function createCounter() {
     $count = 0;
 
-    $counter = function() use (&$count) {
+    $counter = function() use (&$count) { // to access the variable outside of the function scope use ampersand and variable name as(&$count)
        return ++$count;
     };
 
