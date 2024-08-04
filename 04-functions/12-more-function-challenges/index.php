@@ -1,4 +1,6 @@
 <?php
+
+ini_set('display_errors', 1);
 /*
   Challenge 1: Fahrenheit to Celsius
   Create a function called `fahrenheitToCelsius` that takes a Fahrenheit temperature as an argument. Return the temperature converted to Celsius.
@@ -48,14 +50,18 @@ printNamesToUpperCase($names);
 echo '<br>';
 
 // using array map menthod
+$names = ['John', 'David', 'Josh', 'Maccurie', 'Jonas'];
+
 function namesToUpper($name) {
-  $name = strtoupper($name);
+  return strtoupper($name);
+}
+
+$upperNames = array_map('namesToUpper', $names);
+
+foreach ($upperNames as $name) {
   echo $name . '<br>';
 }
 
-$printNames = array_map('namesToUpper' , $names);
-
-$printNames();
 echo '<br>';
 
 /*
@@ -68,8 +74,20 @@ echo '<br>';
 $sentence = 'A quick brown fox jumpssss over the lazzzy dog.';
 
 function findLongestWord($sent) {
-  
+  $allWords = explode(' ', $sent);
+  $longestWord = '';
+  foreach($allWords as $individualWord) {
+    $individualWord = trim($individualWord);
+    $currentWordLength = strlen($individualWord);
+
+    if($currentWordLength > strlen($longestWord) || $longestWord === '') {
+      $longestWord = $individualWord;
+    }
+  }
+
+  return $longestWord;
+
 }
 
-$longestWord = findLongestWord($sentence);
-echo $longestWord;
+// call the function
+echo findLongestWord($sentence);
