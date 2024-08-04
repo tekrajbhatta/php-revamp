@@ -21,7 +21,7 @@ echo '<br>';
 $multiplier = 3;
 $digits = [1, 2, 3, 4, 5];
 
-$multiplied = array_map(fn($n) => $n * $multiplier, $digits);
+$multiplied = array_map(fn($n) => $n * $multiplier, $digits); // can directly acccess outer scope variable where as in anounymous fxn we need to use `use` syntax
 
 var_dump($multiplied);
 echo '<br>';
