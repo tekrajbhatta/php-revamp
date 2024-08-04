@@ -28,13 +28,34 @@ $tempInF = function ($fTemp) use (&$basTemp) {
 
 echo $tempInF(98.6);
 echo '<br>';
+echo '<br>';
 
 /*
   Challenge 2: Print names in uppercase
   Create a function called `printNamesToUpperCase` that takes an array of names as an argument. The function should loop through the array and print each name to the screen in uppercase letters.
 */
 
+// using normal function
+$names = ['John', 'David', 'Josh', 'Maccurie', 'Jonas'];
+function printNamesToUpperCase($names) {
+  foreach($names as $name) {
+    $name = strtoupper($name);
+    echo $name . '<br>';
+  }
+}
 
+printNamesToUpperCase($names);
+echo '<br>';
+
+// using array map menthod
+function namesToUpper($name) {
+  $name = strtoupper($name);
+  echo $name . '<br>';
+}
+
+$printNames = array_map('namesToUpper' , $names);
+
+$printNames();
 echo '<br>';
 
 /*
